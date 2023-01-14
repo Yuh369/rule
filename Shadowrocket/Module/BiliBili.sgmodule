@@ -9,11 +9,23 @@
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
 # 屏蔽DefaultWord
 ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - reject
-
 # 屏蔽直播间商品广告浮窗
-^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? url REJECT-DICT
+^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? - REJECT-DICT
+# 屏蔽广告浮窗
+^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive - REJECT-DICT
+# 应用开屏去广告
+^https://app.bilibili.com/x/v2/splash/show - REJECT-DICT
+# 小卡片广告
+^https://api.bilibili.com/pgc/season/player/cards - REJECT-DICT
+# Defaultword
+^https://app.bilibili.com/x/v2/search/defaultwords - REJECT-DICT
+# Material_Ad
+^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - REJECT-DICT
 
 [Script]
+# 1080P高码率+4K画质(番剧和影视除外)
+Bilibili画质+ = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,requires-body=1,binary-body-mode=1,max-size=3145728,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+
 
 [MITM]
 hostname = app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, *.bilibili.com, *.bilibili.*, grpc.biliapi.net,api.biliapi.net, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
