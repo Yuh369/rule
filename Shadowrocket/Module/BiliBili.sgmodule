@@ -6,23 +6,23 @@
 [URL Rewrite]
 
 # 屏蔽IP请求
-^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip url reject
 # 屏蔽DefaultWord
-^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - reject
+^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default url reject
 # 屏蔽直播间商品广告浮窗
-^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? - REJECT-DICT
+^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? url REJECT-DICT
 # 屏蔽广告浮窗
-^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive - REJECT-DICT
+^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive url REJECT-DICT
 # 应用开屏去广告
-^https://app.bilibili.com/x/v2/splash/show - REJECT-DICT
+^https://app.bilibili.com/x/v2/splash/show url REJECT-DICT
 # 小卡片广告
-^https://api.bilibili.com/pgc/season/player/cards - REJECT-DICT
+^https://api.bilibili.com/pgc/season/player/cards url REJECT-DICT
 # Defaultword
-^https://app.bilibili.com/x/v2/search/defaultwords - REJECT-DICT
+^https://app.bilibili.com/x/v2/search/defaultwords url REJECT-DICT
 # Material_Ad
-^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - REJECT-DICT
+^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report url REJECT-DICT
 # 漫画去广告
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) - REJECT-DICT
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) url REJECT-DICT
 
 [Script]
 # 1080P高码率+4K画质(番剧和影视除外)
