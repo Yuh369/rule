@@ -1,10 +1,10 @@
 #!name=BiliBili+
 #!desc=最后更新时间：2023-01-14
 # 微信公众号：Nature369
+# 说明： QuantumultX重写 移植 Shadowrocket模块
 # Inspired by：@ddgksf2013, @blackmatrix7, @app2smile, @yjqiang
 
 [URL Rewrite]
-
 # 屏蔽IP请求
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip url reject
 # 屏蔽DefaultWord
