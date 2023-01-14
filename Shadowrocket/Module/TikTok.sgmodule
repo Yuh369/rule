@@ -7,7 +7,6 @@
 # 各国英文缩写 https://yumingsuoxie.bmcx.com/
 
 [URL Rewrite]
-
 # 美国
 (?<=_region=)CN(?=&) US 307
 # 日本[需自行开启]
