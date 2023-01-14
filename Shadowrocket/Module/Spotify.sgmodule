@@ -1,6 +1,6 @@
 #!name=Spotify解锁付费
-#!desc=部分解锁premium,建议重新登录,音质不能设置为超高
-# 仓库地址 https://github.com/app2smile/rules
+#!desc=部分解锁premium|建议重新登录|音质不能设置为超高
+# 贡献者：@app2smile
 # 1. 搜索界面 歌单/歌曲可以随意切换完全播放  2. 音乐库已点赞歌曲随意切换完全播放
 
 [MITM]
