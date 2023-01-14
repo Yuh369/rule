@@ -1,10 +1,13 @@
 #!name=TikTok解锁
 #!desc=默认美国|其它自行开启
-# 在大陆地区解锁TikTok美区。需要先安装旧版21.1.0登陆后观看视频、直播、评论、点赞、发布视频等都正常使用后，再从App Store升级至最新版方可使用。
 #!system=ios
+# 在大陆地区解锁TikTok美区。需要先安装旧版21.1.0登陆后观看视频、直播、评论、点赞、发布视频等都正常使用后，再从App Store升级至最新版方可使用。
+# 微信公众号：Nature369
+# 贡献者：@Semporia
 # 各国英文缩写 https://yumingsuoxie.bmcx.com/
 
 [URL Rewrite]
+
 # 美国
 (?<=_region=)CN(?=&) US 307
 # 日本[需自行开启]
