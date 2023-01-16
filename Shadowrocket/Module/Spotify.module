@@ -14,4 +14,4 @@ Spotify+ = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bo
 
 
 [MITM]
-hostname = spclient.wg.spotify.com
+hostname = %APPEND% spclient.wg.spotify.com
