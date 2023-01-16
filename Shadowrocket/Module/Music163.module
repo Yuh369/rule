@@ -5,7 +5,7 @@
 
 [Script]
 # 解锁VIP
-NetEaseMusic+ = type=http-request,pattern=^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
+NetEaseMusic+ = type=http-request,pattern=^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$,max-size=0,script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
 
 [MITM]
 hostname = %APPEND% *.music.163.com
