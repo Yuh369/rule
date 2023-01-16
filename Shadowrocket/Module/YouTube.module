@@ -22,7 +22,7 @@ YouTubeAds = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/yo
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data="https://raw.githubusercontent.com/Yuh369/rule/main/Shadowrocket/Script/Youtube/tinygif.gif"
 
 [MITM]
-hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
+hostname = -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
 
 
 
