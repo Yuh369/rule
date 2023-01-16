@@ -9,4 +9,4 @@
 
 
 [MITM]
-hostname = vip7.fzwdyy.cn
+hostname = %APPEND% vip7.fzwdyy.cn
