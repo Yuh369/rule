@@ -1,0 +1,12 @@
+#!name=大米星球
+#!desc=去广告！
+# 微信公众号：Nature369
+
+[URL Rewrite]
+# 去广告
+^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getGOOGAdver url REJECT-200
+^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getAdvertInfo url REJECT-200
+
+
+[MITM]
+hostname = vip7.fzwdyy.cn
