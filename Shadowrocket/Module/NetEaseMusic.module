@@ -1,5 +1,7 @@
-#!name=网易云解锁
-#!desc=网易云解锁
+#!name=网易云音乐解锁
+#!desc=解锁歌单
+# 微信公众号：Nature369
+# 贡献者：@blackmatrix7
 
 [Proxy Group]
 NetEaseMusic = url-test, url=http://www.gstatic.com/generate_204, interval=600, timeout=5, select=0, policy-regex-filter=(music|NetEaseMusic|网易云)
