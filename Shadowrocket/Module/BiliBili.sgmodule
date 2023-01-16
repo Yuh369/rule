@@ -1,5 +1,5 @@
 #!name=BiliBili+
-#!desc=最后更新时间：2023-01-14
+#!desc=去广告|高画质|高码率|优化界面
 # 微信公众号：Nature369
 # 说明： QuantumultX重写 移植 Shadowrocket模块
 # Inspired by：@ddgksf2013, @blackmatrix7, @app2smile, @yjqiang
@@ -60,7 +60,7 @@ B站_Proto去广告 = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/
 
 [Rule]
 # Bilibili分流 (默认直连）
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/BiliBili/BiliBili.list,DIRECT
+# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/BiliBili/BiliBili.list,DIRECT
 
 [MITM]
 hostname = %APPEND% app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, *.bilibili.com, *.bilibili.*, grpc.biliapi.net,api.biliapi.net, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
