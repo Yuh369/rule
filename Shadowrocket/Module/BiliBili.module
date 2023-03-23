@@ -1,8 +1,8 @@
 #!name=BiliBili+
-#!desc=去广告|高画质|高码率|优化界面
+#!desc=去广告|高画质|高码率|优化界面|大会员
 # 微信公众号：Nature369
 # 说明： QuantumultX重写 移植 Shadowrocket模块
-# Inspired by：@ddgksf2013, @blackmatrix7, @app2smile, @yjqiang
+# Inspired by：@ddgksf2013, @blackmatrix7, @app2smile, @yjqiang, @WeiRen0
 
 [URL Rewrite]
 # 屏蔽IP请求
@@ -23,6 +23,12 @@
 ^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report url REJECT-DICT
 # 漫画去广告
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) url REJECT-DICT
+# 解锁大会员 账号1 密码2
+^http[s]?:\/\/api\.bilibili\.com\/x\/member\/app\/face\/update\?access_key - reject-200
+^http[s]?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Teenagers\/UpdateStatus - reject-200
+^http[s]?:\/\/api\.bilibili\.com\/x\/member\/app\/uname\/update\?_device - reject-200
+^http[s]?:\/\/passport\.bilibili\.com\/x\/passport-login\/revoke - reject
+^http[s]?:\/\/app\.bilibili\.com\/x\/v2\/splash\/show - reject-dict
 
 [Script]
 # 1080P高码率+4K画质(番剧和影视除外)
@@ -48,6 +54,11 @@ B站_我的页面处理 = type=http-response,pattern=^https?:\/\/app\.bilibili\.
 # Proto去广告
 B站_Proto去广告 = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto.js
 
+# 大会员解锁
+# BLBLVIP_11 = type=http-response, pattern=^http[s]?:\/\/((app)|(passport)|(api))\.bilibili\.com\/x\/.*(account\/mine\?|passport-login|vip|show\/tab|account\/myinfo\?).*$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/BLBLVIP.js, timeout=60, script-update-interval=0
+# BZTK_12 = type=http-request, pattern=^http[s]?:\/\/((app)|(passport)|(api))\.bilibili\.com\/(bilibili|x\/v2|x\/vip|x\/resource|x\/passport).*$, script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/BZTK.js, timeout=60, script-update-interval=0
+
+
 # 启动时开启直连模式[自行启用]
 #B站_启动时开启直连模式 = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/domain,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_startup_direct.js
 # 繁体CC字幕转中文简体[自行启用]
@@ -63,4 +74,4 @@ B站_Proto去广告 = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/
 # RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/BiliBili/BiliBili.list,DIRECT
 
 [MITM]
-hostname = %APPEND% app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, *.bilibili.com, *.bilibili.*, grpc.biliapi.net,api.biliapi.net, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
+hostname = %APPEND% app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, *.bilibili.com, *.bilibili.*, grpc.biliapi.net,api.biliapi.net, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net, *.biliapi.*,*.bilibili.*
